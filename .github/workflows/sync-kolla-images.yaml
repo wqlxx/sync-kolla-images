@@ -1,8 +1,11 @@
 name: image-syncer
 
 on:
-  check_suite:
-    types: [completed]
+  push:
+    branches:   # master分支有push时触发此workflow
+      - 'master'
+    tags:       # tag更新时触发此workflow
+      - '*'
 
 jobs:
   sync:
