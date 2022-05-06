@@ -21,7 +21,7 @@ openstack kolla 官方存储镜像的仓库是 quay.io/openstack.kolla，这个�
 ```yaml
 kolla_base_distro: "ubuntu"
 kolla_install_type: "source"
-openstack_release: "yoga"
+openstack_release: "xena"
 docker_registry: "registry.cn-hangzhou.aliyuncs.com"
 docker_namespace: "kollaimage-rj"
 ```
