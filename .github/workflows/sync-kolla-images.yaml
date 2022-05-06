@@ -1,9 +1,8 @@
 name: image-syncer
 
 on:
-  label:
-    types:
-      - edited
+  check_suite:
+    types: [completed]
 
 jobs:
   sync:
