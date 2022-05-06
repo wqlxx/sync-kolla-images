@@ -1,10 +1,9 @@
 name: image-syncer
 
 on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+  label:
+    types:
+      - edited
 
 jobs:
   sync:
