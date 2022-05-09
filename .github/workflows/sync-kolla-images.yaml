@@ -15,6 +15,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      # Log into aliyun registry
+      - name: Log into aliyun registry
+        run: echo "${{ secrets.ALIYUN_PASSWORD }}" | docker login $ALIYUN_REGISTRY -u ${{ secrets.ALIYUN_USERNAME }} --password-stdin
+
       - name: Download image-syncer
         run: |
           wget https://github.com/AliyunContainerService/image-syncer/releases/download/v1.3.1/image-syncer-v1.3.1-linux-amd64.tar.gz
