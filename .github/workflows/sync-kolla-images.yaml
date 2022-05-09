@@ -2,10 +2,9 @@ name: image-syncer
 
 on:
   push:
-    branches:   # master分支有push时触发此workflow
-      - 'master'
-    tags:       # tag更新时触发此workflow
-      - '*'
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
   sync:
